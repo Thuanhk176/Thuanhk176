@@ -1,0 +1,191 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local menu1 = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Jumscare = Instance.new("TextButton")
+local SKYBOX = Instance.new("TextButton")
+local _2006 = Instance.new("TextButton")
+local x100 = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local openmenu = Instance.new("Frame")
+local TextButton_2 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+menu1.Name = "menu1"
+menu1.Parent = ScreenGui
+menu1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+menu1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+menu1.BorderSizePixel = 0
+menu1.Position = UDim2.new(0.283887476, 0, 0.159230769, 0)
+menu1.Size = UDim2.new(0, 419, 0, 295)
+menu1.Active = true
+menu1.Visible = true
+menu1.Draggable = true
+
+ImageLabel.Parent = menu1
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0, 0, 0.0576271191, 0)
+ImageLabel.Size = UDim2.new(0, 419, 0, 278)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=16338548589"
+
+TextLabel.Parent = menu1
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 419, 0, 17)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "ThuanGui (BY THUAN6352 )"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+Jumscare.Name = "Jumscare"
+Jumscare.Parent = menu1
+Jumscare.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Jumscare.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Jumscare.BorderSizePixel = 0
+Jumscare.Position = UDim2.new(0.035799522, 0, 0.145762712, 0)
+Jumscare.Size = UDim2.new(0, 136, 0, 42)
+Jumscare.Font = Enum.Font.SourceSans
+Jumscare.Text = "JUMPSCARE"
+Jumscare.TextColor3 = Color3.fromRGB(0, 0, 0)
+Jumscare.TextScaled = true
+Jumscare.TextSize = 14.000
+Jumscare.TextWrapped = true
+Jumscare.MouseButton1Down:Connect(function()
+	local jumpscareSound = Instance.new("Sound", workspace)
+	jumpscareSound.Name = "JumpscareSound"
+	jumpscareSound.Volume = 9999999999999999
+	jumpscareSound.Pitch = 0.75
+	jumpscareSound.SoundId = "rbxassetid://7006487793"
+
+	local jumpscareGUI = Instance.new("ScreenGui", nil)
+	jumpscareGUI.Name = "Jumpscare"
+	local image = Instance.new("ImageLabel", jumpscareGUI)
+	image.Name = "JumpscareImage"
+	image.BackgroundColor3 = Color3.new(0, 0, 0)
+	image.BorderColor3 = Color3.new(255, 255, 255)
+	image.BorderSizePixel = 0
+	image.Size = UDim2.new(1, 0, 1, 0)
+	image.Image = "http://www.roblox.com/asset/?id=16327217834"
+	image.Active = true
+
+	for i, c in pairs(game.Players:GetChildren()) do
+		local jumpscareClone = jumpscareGUI:Clone()
+		jumpscareClone.Parent = c.PlayerGui
+	end
+	jumpscareSound:Play()
+	wait(10)
+	jumpscareSound:Destroy()
+	for i, c in pairs(game.Players:GetChildren()) do
+		c.PlayerGui.Jumpscare:Destroy()
+	end
+end)
+
+SKYBOX.Name = "SKYBOX"
+SKYBOX.Parent = menu1
+SKYBOX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SKYBOX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SKYBOX.BorderSizePixel = 0
+SKYBOX.Position = UDim2.new(0.57756561, 0, 0.427118629, 0)
+SKYBOX.Size = UDim2.new(0, 136, 0, 42)
+SKYBOX.Font = Enum.Font.SourceSans
+SKYBOX.Text = "SKYBOX"
+SKYBOX.TextColor3 = Color3.fromRGB(0, 0, 0)
+SKYBOX.TextScaled = true
+SKYBOX.TextSize = 14.000
+SKYBOX.TextWrapped = true
+SKYBOX.MouseButton1Down:Connect(function()
+	local msg2 = Instance.new("Hint",workspace)
+	msg2.Text = "THUAN6352 IN THE BEAT HAHAHAHAHAHA"
+	imageOne = "http://www.roblox.com/asset/?id=16327217834" imageTwo = "http://www.roblox.com/asset/?id=16327217834" imageThree = "http://www.roblox.com/asset/?id=16327217834" imageFour = "http://www.roblox.com/asset/?id=16327217834" imageFive = "http://www.roblox.com/asset/?id=16327217834" imageSix = "http://www.roblox.com/asset/?id=16327217834" imageSeven = "http://www.roblox.com/asset/?id=16327217834" imageEight = "http://www.roblox.com/asset/?id=16327217834" Spooky = Instance.new("Sound", game.Workspace) Spooky.Name = "Spooky" Spooky.SoundId = "rbxassetid://1839246711" Spooky.Volume = 1500 Spooky.Looped = true Spooky:Play() Sky = Instance.new("Sky", game.Lighting) Sky.SkyboxBk = imageOne Sky.SkyboxDn = imageOne Sky.SkyboxFt = imageOne Sky.SkyboxLf = imageOne Sky.SkyboxRt = imageOne Sky.SkyboxUp = imageOne while true do     Sky.SkyboxBk = imageOne     Sky.SkyboxDn = imageOne     Sky.SkyboxFt = imageOne     Sky.SkyboxLf = imageOne     Sky.SkyboxRt = imageOne     Sky.SkyboxUp = imageOne     wait(0.25)     Sky.SkyboxBk = imageTwo     Sky.SkyboxDn = imageTwo     Sky.SkyboxFt = imageTwo     Sky.SkyboxLf = imageTwo     Sky.SkyboxRt = imageTwo     Sky.SkyboxUp = imageTwo     wait(0.25)     Sky.SkyboxBk = imageThree     Sky.SkyboxDn = imageThree     Sky.SkyboxFt = imageThree     Sky.SkyboxLf = imageThree     Sky.SkyboxRt = imageThree     Sky.SkyboxUp = imageThree     wait(0.25)     Sky.SkyboxBk = imageFour     Sky.SkyboxDn = imageFour     Sky.SkyboxFt = imageFour     Sky.SkyboxLf = imageFour     Sky.SkyboxRt = imageFour     Sky.SkyboxUp = imageFour     wait(0.25)     Sky.SkyboxBk = imageFive     Sky.SkyboxDn = imageFive     Sky.SkyboxFt = imageFive     Sky.SkyboxLf = imageFive     Sky.SkyboxRt = imageFive     Sky.SkyboxUp = imageFive     wait(0.25)     Sky.SkyboxBk = imageSix     Sky.SkyboxDn = imageSix     Sky.SkyboxFt = imageSix     Sky.SkyboxLf = imageSix     Sky.SkyboxRt = imageSix     Sky.SkyboxUp = imageSix     wait(0.25)     Sky.SkyboxBk = imageSeven     Sky.SkyboxDn = imageSeven     Sky.SkyboxFt = imageSeven     Sky.SkyboxLf = imageSeven     Sky.SkyboxRt = imageSeven     Sky.SkyboxUp = imageSeven     wait(0.25)     Sky.SkyboxBk = imageEight     Sky.SkyboxDn = imageEight     Sky.SkyboxFt = imageEight     Sky.SkyboxLf = imageEight     Sky.SkyboxRt = imageEight     Sky.SkyboxUp = imageEight     wait(0.25) end 
+end)
+
+
+_2006.Name = "2006"
+_2006.Parent = menu1
+_2006.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_2006.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2006.BorderSizePixel = 0
+_2006.Position = UDim2.new(0.035799522, 0, 0.427118629, 0)
+_2006.Size = UDim2.new(0, 136, 0, 42)
+_2006.Font = Enum.Font.SourceSans
+_2006.Text = "2006"
+_2006.TextColor3 = Color3.fromRGB(0, 0, 0)
+_2006.TextScaled = true
+_2006.TextSize = 14.000
+_2006.TextWrapped = true
+_2006.MouseButton1Down:Connect(function()
+	local sound = game.Workspace.Click -- location of the click sound
+
+	script.Parent.MouseButton1Click:Connect(function()
+		sound:Play()
+	end)
+end)
+
+x100.Name = "x100"
+x100.Parent = menu1
+x100.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+x100.BorderColor3 = Color3.fromRGB(0, 0, 0)
+x100.BorderSizePixel = 0
+x100.Position = UDim2.new(0.57756561, 0, 0.145762712, 0)
+x100.Size = UDim2.new(0, 136, 0, 42)
+x100.Font = Enum.Font.SourceSans
+x100.Text = "X 100"
+x100.TextColor3 = Color3.fromRGB(0, 0, 0)
+x100.TextScaled = true
+x100.TextSize = 14.000
+x100.TextWrapped = true
+x100.MouseButton1Down:Connect(function()
+	putWhateverhere = Instance.new("Hint")
+	putWhateverhere.Text = "THUAN 6352 IN THE BEAT"
+	putWhateverhere.Parent = workspace
+end)
+
+TextButton.Parent = menu1
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.942720771, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 24, 0, 17)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "x"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:Connect(function()
+	menu1.Visible = false
+	openmenu.Visible = true
+end)
+
+openmenu.Name = "openmenu"
+openmenu.Parent = ScreenGui
+openmenu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+openmenu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+openmenu.BorderSizePixel = 0
+openmenu.Position = UDim2.new(0, 0, 0.440769225, 0)
+openmenu.Size = UDim2.new(0, 100, 0, 50)
+openmenu.Active = true
+openmenu.Draggable = true
+
+TextButton_2.Parent = openmenu
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Size = UDim2.new(0, 100, 0, 50)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+TextButton_2.MouseButton1Down:Connect(function()
+	menu1.Visible = true
+	openmenu.Visible = false
+end)
